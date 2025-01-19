@@ -1,0 +1,56 @@
+
+
+
+script:
+
+pipeline{
+    agent any
+    //environment{
+        // PATH=" "
+    //}
+    tools{
+        maven 'MAVEN_HOME'
+    }
+    stages{
+        stage('git repo & clean'){
+            steps{
+                bat "rmdir /s /q mavenrepo"
+                bat "git clone https://github.com/angelenaavula/mavenrepo.git"
+                bat "mvn clean -f mavenrepo"
+            }
+        }
+        stage('install'){
+            steps{
+                bat "mvn install -f mavenrepo"
+            }
+        }
+        stage('test'){
+            steps{
+                bat "mvn test -f mavenrepo"
+            }
+        }
+        stage('package'){
+            steps{
+                bat "mvn package -f mavenrepo"
+            }
+        }
+    }
+}
+
+
+
+install pipeline stage view plugin for scripted pipeline
+
+
+
+
+
+
+
+
+
+
+
+
+
+
