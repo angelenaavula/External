@@ -1,0 +1,71 @@
+1. Pull the Ubuntu image 
+docker pull ubuntu  
+
+2. Run a container from the Ubuntu image 
+docker run -it --name newubuntu -d ubuntu  
+
+3. List all running containers 
+docker ps  
+
+4. Access the running container 
+docker exec -it 885a01bcdbe0 bash  
+
+5. Check if Git is installed 
+git --version  
+
+6. Update the package list 
+apt update  
+
+7. Install Git 
+apt install git -y  
+
+8. Verify Git installation 
+git --version  
+
+9. Exit the container 
+exit  
+
+10. Stop the running container 
+docker stop 885a01bcdbe0  
+ 
+11. Save the container as an image 
+docker commit 885a01bcdbe0 budarajumadhurika/newubuntu2024  
+
+12. List all local images 
+docker images  
+
+13. Log in to Docker Hub 
+docker login  
+
+14. Push the image to Docker Hub 
+docker push budarajumadhurika/newubuntu2024  
+
+15. Log out of Docker Hub 
+docker logout  
+
+16. Remove the container 
+docker rm 885a01bcdbe0  
+
+17. Remove the local image 
+docker rmi budarajumadhurika/newubuntu2024  
+
+18. Pull the image from Docker Hub 
+docker pull budarajumadhurika/newubuntu2024  
+
+19. Run a container from the custom image 
+docker run --name newubuntu2024 -it budarajumadhurika/newubuntu2024  
+
+20. Check Git version 
+git --version  
+ 
+21. Exit the container 
+exit  
+
+22. List all containers (including stopped ones) 
+docker ps -a  
+
+23. Remove the container 
+docker rm 28aee36085cb  
+
+24. Remove the custom image 
+docker rmi budarajumadhurika/newubuntu2024  
