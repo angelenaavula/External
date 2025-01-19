@@ -1,0 +1,49 @@
+1. docker build -t redisnew . 
+
+2. docker run --name myredisnew -d redisnew 
+
+3. docker ps 
+
+4. docker stop myredisnew 
+
+5. docker login 
+
+6. docker ps -a 
+
+7. docker commit 0e993d2009a1 budarajumadhurika/redis1 
+
+8. docker images 
+
+9. docker push budarajumadhurika/redis1 
+
+10. docker rm 0e993d2009a1 
+
+11. docker rmi budarajumadhurika/redis1 
+
+12. docker ps -a 
+
+13. docker logout 
+
+14. docker pull budarajumadhurika/redis1 
+ 
+15. docker run --name myredis -d budarajumadhurika/redis1 
+
+16. docker exec -it myredis redis-cli 
+ 
+17. SET name "Abcdef" 
+
+18. GET name 
+
+19. exit 
+
+20. docker ps -a 
+
+21. docker stop myredis 
+
+22. docker rm 50a6e4a9c326 
+
+23. docker images 
+
+24. docker rmi budarajumadhurika/redis1 
+
+docker logout 
