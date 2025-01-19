@@ -1,0 +1,7 @@
+docker run -it ubuntu /bin/bash
+apt update && apt install -y nginx
+exit
+docker ps -a
+docker commit 123abc my-custom-image:latest
+docker images
+
