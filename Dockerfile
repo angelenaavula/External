@@ -3,3 +3,6 @@ CMD ["redis-server"]
 
 
 /DockerProjects/Redis
+
+
+type nul > Dockerfile
