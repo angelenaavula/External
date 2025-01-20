@@ -1,0 +1,5 @@
+docker login -u angelena16
+docker pull jasonrivers/nagios:latest
+docker run --name nagiosdemo -p 8888:80 jasonrivers/nagios:latest
+go to port 8888
+nagiosadmin nagios
