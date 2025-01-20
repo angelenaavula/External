@@ -1,0 +1,11 @@
+https://gist.github.com/bradtraversy/faa8de544c62eef3f31de406982f1d42
+
+docker login -u
+compose folder docker-compose.yaml
+docker compose --version
+docker-compose up -d
+docker ps -a
+go open 8000
+
+docker-compose stop
+docker-compose down
