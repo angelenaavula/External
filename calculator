@@ -1,0 +1,46 @@
+Create folder with files Dockerfilr and calculator.js
+
+  function add(a, b) {
+  return a + b;
+}
+
+function subtract(a, b) {
+  return a - b;
+}
+
+function multiply(a, b) {
+  return a * b;
+}
+
+function divide(a, b) {
+  if (b === 0) {
+    console.log("Error: Division by zero is not allowed!");
+    return null;
+  }
+  return a / b;
+}
+
+// Example usage
+const num1 = 10;
+const num2 = 5;
+
+console.log("Addition:", add(num1, num2));
+console.log("Subtraction:", subtract(num1, num2));
+console.log("Multiplication:", multiply(num1, num2));
+console.log("Division:", divide(num1, num2));
+
+
+
+FROM node:16-alpine
+WORKDIR/app
+COPY calculator.js/app
+CMD ["node","calculator.js"]
+
+
+docker build -t simple-calculator
+docker run simple-calculator
+docker login
+docker tag simple-calculator angelena/simple-calculator
+docker push angelena/simple-calculator
+docker pull ....
+docker run.....
